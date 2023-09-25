@@ -5,14 +5,30 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="09353891-b7f1-49fd-96f9-976b6fc5ab38" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/src/test/java/android/project/duolingo/AllureAttachmentsManager.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/android/project/duolingo/AllureLogger.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/android/project/duolingo/MyExtension.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/android/project/duolingo/duolingoTest/HaveAccountTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/android/project/duolingo/duolingoTest/TutorialAccountTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/android/project/duolingo/pages/HaveAccountPage.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/android/project/duolingo/pages/TutorialAccountTwoStepPage.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/android/project/duolingo/pages/TutorialOnePages/GetTitleTutorialPages.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/android/project/duolingo/pages/TutorialOnePages/TutorialAccountOneStepPage.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/com/example/appiumandroidtets/MainPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/example/appiumandroidtets/MainPage.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/com/example/appiumandroidtets/MainPageTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/example/appiumandroidtets/MainPageTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/android/project/duolingo/duolingoTest/BaseTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/android/project/duolingo/duolingoTest/BaseTest.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Class" />
+      </list>
+    </option>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -30,11 +46,57 @@
   "keyToString": {
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
+    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
     "WebServerToolWindowFactoryState": "false",
     "git-widget-placeholder": "master",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
     "vue.rearranger.settings.migration": "true"
   }
 }]]></component>
+  <component name="RunManager" selected="JUnit.TutorialAccountTest.checkGetTextOpenApp">
+    <configuration name="TutorialAccountTest.checkActivitiBegin" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="appiumAndroidTets" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="android.project.duolingo.duolingoTest.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="android.project.duolingo.duolingoTest" />
+      <option name="MAIN_CLASS_NAME" value="android.project.duolingo.duolingoTest.TutorialAccountTest" />
+      <option name="METHOD_NAME" value="checkActivitiBegin" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="TutorialAccountTest.checkGetTextOpenApp" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="appiumAndroidTets" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="android.project.duolingo.duolingoTest.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="android.project.duolingo.duolingoTest" />
+      <option name="MAIN_CLASS_NAME" value="android.project.duolingo.duolingoTest.TutorialAccountTest" />
+      <option name="METHOD_NAME" value="checkGetTextOpenApp" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="JUnit.TutorialAccountTest.checkGetTextOpenApp" />
+        <item itemvalue="JUnit.TutorialAccountTest.checkActivitiBegin" />
+      </list>
+    </recent_temporary>
+  </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
@@ -43,8 +105,11 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1695624141812</updated>
-      <workItem from="1695624142885" duration="1000" />
+      <workItem from="1695624142885" duration="15043000" />
     </task>
     <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
   </component>
 </project>
