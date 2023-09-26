@@ -18,22 +18,26 @@ public class TutorialAccountOneStepPage {
 
     @AndroidFindBy(id = "com.duolingo:id/introFlowNewUserButton")
     private WebElement buttonBegin;
-    @AndroidFindBy(id = "com.duolingo:id/introFlowLoginButton")
-    private WebElement buttonAlreadyAccount;
+    @AndroidFindBy(id = "com.duolingo:id/continueButton")
+    private WebElement buttonContinue;
+    @AndroidFindBy(id = "com.duolingo:id/back")
+    private WebElement buttonBack;
 
     public boolean checkButtonBegin() {
         LOG.info("Проверка активности кнопки Начать");
         return buttonBegin.isEnabled();
     }
-
-    public boolean checkButtonAlreadyAccount() {
-        LOG.info("Проверка активности кнопки У меня уже есть акаунт");
-        return buttonBegin.isEnabled();
-    }
-
     public void clickButtonBegin() {
         LOG.info("Клик на кнопу начать");
         buttonBegin.click();
+    }
+    public void clickButtonContinue() {
+        LOG.info("Клик на кнопу продолжить");
+        buttonContinue.click();
+    }
+    public void clickButtonBack(){
+        LOG.info("Клик на кнопку назад");
+        buttonBack.click();
     }
 
 

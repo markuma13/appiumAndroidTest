@@ -1,6 +1,7 @@
 package android.project.duolingo.duolingoTest;
 
 import android.project.duolingo.MyExtension;
+import android.project.duolingo.pages.HaveAccountPage;
 import android.project.duolingo.pages.TutorialOnePages.GetTitleTutorialPages;
 import android.project.duolingo.pages.TutorialOnePages.TutorialAccountOneStepPage;
 import android.project.duolingo.pages.TutorialAccountTwoStepPage;
@@ -21,6 +22,7 @@ public class TutorialAccountTest extends BaseTest {
     private TutorialAccountOneStepPage tutorialAccountOneStepPage;
     private TutorialAccountTwoStepPage tutorialAccountTwoStepPage;
     private GetTitleTutorialPages getTitleTutorialPages;
+    private HaveAccountPage haveAccountPage;
 
     @BeforeEach
     @Override
@@ -30,6 +32,7 @@ public class TutorialAccountTest extends BaseTest {
         tutorialAccountOneStepPage = new TutorialAccountOneStepPage(getDriver());
         tutorialAccountTwoStepPage = new TutorialAccountTwoStepPage(getDriver());
         getTitleTutorialPages = new GetTitleTutorialPages(getDriver());
+        haveAccountPage = new HaveAccountPage(getDriver());
     }
 
     @Test
@@ -44,8 +47,42 @@ public class TutorialAccountTest extends BaseTest {
     @DisplayName("Проверка активности кнопок Начать и У меня уже есть акаунт")
     public void checkActivitiBegin() {
         assertTrue(tutorialAccountOneStepPage.checkButtonBegin(), "Кнопка Начать не активна");
-        assertTrue(tutorialAccountOneStepPage.checkButtonAlreadyAccount(), "Кнопка У меня уже есть акаунт не активна");
+        assertTrue(haveAccountPage.checkButtonAlreadyAccount(), "Кнопка У меня уже есть акаунт не активна");
     }
+
+    @Test
+    @DisplayName("Проверка наличия текста шагов обучения")
+    public void checkTutorialGetText(){
+        checkGetTextOpenApp();
+        tutorialAccountOneStepPage.clickButtonBegin();
+
+        WebElement elementOne = getTitleTutorialPages.getTitleTopTextTutorial();
+        String expectedText = "Привет! Я Duo!";
+        assertEquals(expectedText, getTitleTutorialPages.getTextFromElement(elementOne));
+
+        tutorialAccountOneStepPage.clickButtonContinue();
+
+        WebElement elementTwo = getTitleTutorialPages.getTitleTopTextTutorial();
+        String expectedTextTwo = "Ну что, поехали!";
+        assertEquals(expectedTextTwo, getTitleTutorialPages.getTextFromElement(elementTwo));
+
+        tutorialAccountOneStepPage.clickButtonContinue();
+        WebElement elementTree = getTitleTutorialPages.getTitleTextTutorialChoiceLanguage();
+        String expectedTextTree = "Какой язык вы хотите изучать?";
+        assertEquals(expectedTextTree, getTitleTutorialPages.getTextFromElement(elementTree));
+    }
+
+    @Test
+    @DisplayName("Проверка возвращения на гланый экран полсе шага в выборе языка")
+    public void checkBackStepLanguage(){
+        checkTutorialGetText();
+        tutorialAccountOneStepPage.clickButtonBack();
+        checkGetTextOpenApp();
+    }
+
+
+
+
 
 
 }

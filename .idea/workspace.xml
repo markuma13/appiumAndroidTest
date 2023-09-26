@@ -4,19 +4,12 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="09353891-b7f1-49fd-96f9-976b6fc5ab38" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src/test/java/android/project/duolingo/AllureAttachmentsManager.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/android/project/duolingo/AllureLogger.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/android/project/duolingo/MyExtension.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/android/project/duolingo/duolingoTest/HaveAccountTest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/android/project/duolingo/duolingoTest/TutorialAccountTest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/android/project/duolingo/pages/HaveAccountPage.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/android/project/duolingo/pages/TutorialAccountTwoStepPage.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/android/project/duolingo/pages/TutorialOnePages/GetTitleTutorialPages.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/android/project/duolingo/pages/TutorialOnePages/TutorialAccountOneStepPage.java" afterDir="false" />
+    <list default="true" id="09353891-b7f1-49fd-96f9-976b6fc5ab38" name="Changes" comment="addUpdateProject">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/android/project/duolingo/duolingoTest/BaseTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/android/project/duolingo/duolingoTest/BaseTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/android/project/duolingo/duolingoTest/TutorialAccountTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/android/project/duolingo/duolingoTest/TutorialAccountTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/android/project/duolingo/pages/HaveAccountPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/android/project/duolingo/pages/HaveAccountPage.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/android/project/duolingo/pages/TutorialOnePages/GetTitleTutorialPages.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/android/project/duolingo/pages/TutorialOnePages/GetTitleTutorialPages.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/android/project/duolingo/pages/TutorialOnePages/TutorialAccountOneStepPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/android/project/duolingo/pages/TutorialOnePages/TutorialAccountOneStepPage.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -33,31 +26,31 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
-  <component name="ProjectColorInfo"><![CDATA[{
-  "associatedIndex": 5
-}]]></component>
+  <component name="ProjectColorInfo">{
+  &quot;associatedIndex&quot;: 5
+}</component>
   <component name="ProjectId" id="2VsUAb9t5rwzX7ss5AzsOi8qKdc" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
-    "WebServerToolWindowFactoryState": "false",
-    "git-widget-placeholder": "master",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "nodejs_package_manager_path": "npm",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
+    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;master&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
-}]]></component>
-  <component name="RunManager" selected="JUnit.TutorialAccountTest.checkGetTextOpenApp">
+}</component>
+  <component name="RunManager" selected="JUnit.TutorialAccountTest.checkBackStepLanguage">
     <configuration name="TutorialAccountTest.checkActivitiBegin" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="appiumAndroidTets" />
       <extension name="coverage">
@@ -69,6 +62,22 @@
       <option name="PACKAGE_NAME" value="android.project.duolingo.duolingoTest" />
       <option name="MAIN_CLASS_NAME" value="android.project.duolingo.duolingoTest.TutorialAccountTest" />
       <option name="METHOD_NAME" value="checkActivitiBegin" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="TutorialAccountTest.checkBackStepLanguage" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="appiumAndroidTets" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="android.project.duolingo.duolingoTest.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="android.project.duolingo.duolingoTest" />
+      <option name="MAIN_CLASS_NAME" value="android.project.duolingo.duolingoTest.TutorialAccountTest" />
+      <option name="METHOD_NAME" value="checkBackStepLanguage" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
@@ -90,8 +99,26 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="TutorialAccountTest.checkTutorialGetText" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="appiumAndroidTets" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="android.project.duolingo.duolingoTest.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="android.project.duolingo.duolingoTest" />
+      <option name="MAIN_CLASS_NAME" value="android.project.duolingo.duolingoTest.TutorialAccountTest" />
+      <option name="METHOD_NAME" value="checkTutorialGetText" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="JUnit.TutorialAccountTest.checkBackStepLanguage" />
+        <item itemvalue="JUnit.TutorialAccountTest.checkTutorialGetText" />
         <item itemvalue="JUnit.TutorialAccountTest.checkGetTextOpenApp" />
         <item itemvalue="JUnit.TutorialAccountTest.checkActivitiBegin" />
       </list>
@@ -105,11 +132,26 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1695624141812</updated>
-      <workItem from="1695624142885" duration="15043000" />
+      <workItem from="1695624142885" duration="15154000" />
+      <workItem from="1695727627809" duration="2299000" />
+      <workItem from="1695741949905" duration="3325000" />
     </task>
+    <task id="LOCAL-00001" summary="addUpdateProject">
+      <option name="closed" value="true" />
+      <created>1695641656619</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1695641656619</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="addUpdateProject" />
+    <option name="LAST_COMMIT_MESSAGE" value="addUpdateProject" />
   </component>
 </project>

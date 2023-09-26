@@ -19,6 +19,8 @@ public class GetTitleTutorialPages {
     private WebElement getTextGreetings;
     @AndroidFindBy(id = "com.duolingo:id/titleTop")
     private WebElement titleTopTextTutorial;
+    @AndroidFindBy(id = "com.duolingo:id/title")
+    private WebElement titleTextTutorialChoiceLanguage;
 
     public String getTextFromElement(WebElement element) {
         String value = element.getText();
@@ -27,6 +29,6 @@ public class GetTitleTutorialPages {
     }
 
     public WebElement getTitleTextGreetings() {return getTextGreetings;}
-
     public WebElement getTitleTopTextTutorial() {return titleTopTextTutorial;}
+    public WebElement getTitleTextTutorialChoiceLanguage(){return titleTextTutorialChoiceLanguage;}
 }
