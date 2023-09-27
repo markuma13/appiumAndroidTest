@@ -29,11 +29,35 @@ public class HaveAccountPage {
     private WebElement facebookButton;
     @AndroidFindBy(id = "com.duolingo:id/googleButton")
     private WebElement googleButton;
+    @AndroidFindBy(id = "com.duolingo:id/errorMessage")
+    private WebElement errorMessage;
 
     public boolean checkButtonAlreadyAccount() {
         LOG.info("Проверка активности кнопки У меня уже есть акаунт");
         return buttonAlreadyAccount.isEnabled();
     }
+    public void clickButtonAlreadyAccount(){
+        LOG.info("Клик на кнопку У меня уже есть акаунт");
+        buttonAlreadyAccount.click();
+    }
+    public void clickSignInButton(){
+        LOG.info("Клик на кнопку Войти");
+        signInButton.click();
+    }
+    public void fillEmailField(String email){
+        LOG.info("Ввод email: " + email);
+        loginField.sendKeys(email);
+    }
+    public void enterPassword(){
+        LOG.info("Ввод password");
+        passwordField.sendKeys("asdwe");
+    }
+    public String getTextErrorMessage(){
+        LOG.info("Получено валидационное сообщения после отправки формы");
+        return errorMessage.getText();
+    }
+
+
 
 
 }

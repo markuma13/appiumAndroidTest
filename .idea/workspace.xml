@@ -4,12 +4,11 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="09353891-b7f1-49fd-96f9-976b6fc5ab38" name="Changes" comment="addUpdateProject">
+    <list default="true" id="09353891-b7f1-49fd-96f9-976b6fc5ab38" name="Changes" comment="addNewTest">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/android/project/duolingo/duolingoTest/TutorialAccountTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/android/project/duolingo/duolingoTest/TutorialAccountTest.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/android/project/duolingo/pages/HaveAccountPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/android/project/duolingo/pages/HaveAccountPage.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/android/project/duolingo/pages/TutorialOnePages/GetTitleTutorialPages.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/android/project/duolingo/pages/TutorialOnePages/GetTitleTutorialPages.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/android/project/duolingo/pages/TutorialOnePages/TutorialAccountOneStepPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/android/project/duolingo/pages/TutorialOnePages/TutorialAccountOneStepPage.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -50,23 +49,7 @@
     &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
 }</component>
-  <component name="RunManager" selected="JUnit.TutorialAccountTest.checkBackStepLanguage">
-    <configuration name="TutorialAccountTest.checkActivitiBegin" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="appiumAndroidTets" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="android.project.duolingo.duolingoTest.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="android.project.duolingo.duolingoTest" />
-      <option name="MAIN_CLASS_NAME" value="android.project.duolingo.duolingoTest.TutorialAccountTest" />
-      <option name="METHOD_NAME" value="checkActivitiBegin" />
-      <option name="TEST_OBJECT" value="method" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
+  <component name="RunManager" selected="JUnit.TutorialAccountTest.checkInvalidEnterEmailAccount">
     <configuration name="TutorialAccountTest.checkBackStepLanguage" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="appiumAndroidTets" />
       <extension name="coverage">
@@ -83,7 +66,7 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="TutorialAccountTest.checkGetTextOpenApp" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="TutorialAccountTest.checkInvalidEnterEmailAccount (1)" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="appiumAndroidTets" />
       <extension name="coverage">
         <pattern>
@@ -93,7 +76,23 @@
       </extension>
       <option name="PACKAGE_NAME" value="android.project.duolingo.duolingoTest" />
       <option name="MAIN_CLASS_NAME" value="android.project.duolingo.duolingoTest.TutorialAccountTest" />
-      <option name="METHOD_NAME" value="checkGetTextOpenApp" />
+      <option name="METHOD_NAME" value="checkInvalidEnterEmailAccount(java.lang.String,java.lang.String)" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="TutorialAccountTest.checkInvalidEnterEmailAccount" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="appiumAndroidTets" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="android.project.duolingo.duolingoTest.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="android.project.duolingo.duolingoTest" />
+      <option name="MAIN_CLASS_NAME" value="android.project.duolingo.duolingoTest.TutorialAccountTest" />
+      <option name="METHOD_NAME" value="checkInvalidEnterEmailAccount(java.lang.String)" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
@@ -115,12 +114,29 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="TutorialAccountTest.checkenter" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="appiumAndroidTets" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="android.project.duolingo.duolingoTest.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="android.project.duolingo.duolingoTest" />
+      <option name="MAIN_CLASS_NAME" value="android.project.duolingo.duolingoTest.TutorialAccountTest" />
+      <option name="METHOD_NAME" value="checkenter" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="JUnit.TutorialAccountTest.checkInvalidEnterEmailAccount" />
+        <item itemvalue="JUnit.TutorialAccountTest.checkInvalidEnterEmailAccount (1)" />
+        <item itemvalue="JUnit.TutorialAccountTest.checkenter" />
         <item itemvalue="JUnit.TutorialAccountTest.checkBackStepLanguage" />
         <item itemvalue="JUnit.TutorialAccountTest.checkTutorialGetText" />
-        <item itemvalue="JUnit.TutorialAccountTest.checkGetTextOpenApp" />
-        <item itemvalue="JUnit.TutorialAccountTest.checkActivitiBegin" />
       </list>
     </recent_temporary>
   </component>
@@ -134,7 +150,8 @@
       <updated>1695624141812</updated>
       <workItem from="1695624142885" duration="15154000" />
       <workItem from="1695727627809" duration="2299000" />
-      <workItem from="1695741949905" duration="3325000" />
+      <workItem from="1695741949905" duration="3664000" />
+      <workItem from="1695839128238" duration="7154000" />
     </task>
     <task id="LOCAL-00001" summary="addUpdateProject">
       <option name="closed" value="true" />
@@ -144,7 +161,15 @@
       <option name="project" value="LOCAL" />
       <updated>1695641656619</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="addNewTest">
+      <option name="closed" value="true" />
+      <created>1695758015886</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1695758015886</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -152,6 +177,7 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="addUpdateProject" />
-    <option name="LAST_COMMIT_MESSAGE" value="addUpdateProject" />
+    <MESSAGE value="addNewTest" />
+    <option name="LAST_COMMIT_MESSAGE" value="addNewTest" />
   </component>
 </project>

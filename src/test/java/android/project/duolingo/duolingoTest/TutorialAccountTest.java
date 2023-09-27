@@ -10,6 +10,8 @@ import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.extension.ExtendWith;
+import org.junit.jupiter.params.ParameterizedTest;
+import org.junit.jupiter.params.provider.CsvSource;
 import org.openqa.selenium.WebElement;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
@@ -73,12 +75,27 @@ public class TutorialAccountTest extends BaseTest {
     }
 
     @Test
-    @DisplayName("Проверка возвращения на гланый экран полсе шага в выборе языка")
+    @DisplayName("Проверка возвращения на гланый экран после шага в выборе языка")
     public void checkBackStepLanguage(){
         checkTutorialGetText();
         tutorialAccountOneStepPage.clickButtonBack();
         checkGetTextOpenApp();
     }
+
+    @ParameterizedTest(name = "#{index} - Проверка ввода на невалидность Email {0}")
+    @CsvSource({"sasdewef", "%%%/%%%", "trrtr@lwerwe.ru"})
+    @DisplayName("Проверка ввода невалидного Email на форме авторизации")
+    public void checkInvalidEnterEmailAccount(String email){
+        checkActivitiBegin();
+        haveAccountPage.clickButtonAlreadyAccount();
+        haveAccountPage.fillEmailField(email);
+        haveAccountPage.enterPassword();
+        haveAccountPage.clickSignInButton();
+
+        assertEquals(haveAccountPage.getTextErrorMessage(), "Неверные имя пользователя и пароль",
+                "Неверный текст валидации либо отсуствует");
+    }
+
 
 
 
