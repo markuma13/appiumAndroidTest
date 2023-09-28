@@ -36,26 +36,40 @@ public class HaveAccountPage {
         LOG.info("Проверка активности кнопки У меня уже есть акаунт");
         return buttonAlreadyAccount.isEnabled();
     }
-    public void clickButtonAlreadyAccount(){
+    public HaveAccountPage clickButtonAlreadyAccount(){
         LOG.info("Клик на кнопку У меня уже есть акаунт");
         buttonAlreadyAccount.click();
+        return this;
     }
-    public void clickSignInButton(){
+    public HaveAccountPage clickSignInButton(){
         LOG.info("Клик на кнопку Войти");
         signInButton.click();
+        return this;
     }
     public void fillEmailField(String email){
         LOG.info("Ввод email: " + email);
         loginField.sendKeys(email);
     }
-    public void enterPassword(){
+    public HaveAccountPage validEmailField(){
+        LOG.info("Ввод валидного email");
+        loginField.sendKeys("tytufy@mailto.plus");
+        return this;
+    }
+    public HaveAccountPage enterPassword(){
         LOG.info("Ввод password");
-        passwordField.sendKeys("asdwe");
+        passwordField.sendKeys("AA890890890");
+        return this;
     }
     public String getTextErrorMessage(){
-        LOG.info("Получено валидационное сообщения после отправки формы");
-        return errorMessage.getText();
+        String valueErrorMessage = errorMessage.getText();
+        LOG.info("Получено валидационное сообщения после отправки формы: \"" + valueErrorMessage + "\"");
+        return valueErrorMessage;
     }
+
+
+
+
+
 
 
 

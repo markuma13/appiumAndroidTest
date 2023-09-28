@@ -4,7 +4,7 @@ import android.project.duolingo.MyExtension;
 import android.project.duolingo.pages.HaveAccountPage;
 import android.project.duolingo.pages.TutorialOnePages.GetTitleTutorialPages;
 import android.project.duolingo.pages.TutorialOnePages.TutorialAccountOneStepPage;
-import android.project.duolingo.pages.TutorialAccountTwoStepPage;
+import android.project.duolingo.pages.UserAccountPage;
 import io.qameta.allure.Step;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.DisplayName;
@@ -18,11 +18,12 @@ import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertTrue;
 
 import java.net.MalformedURLException;
+import java.time.Duration;
 
 @ExtendWith(MyExtension.class)
 public class TutorialAccountTest extends BaseTest {
     private TutorialAccountOneStepPage tutorialAccountOneStepPage;
-    private TutorialAccountTwoStepPage tutorialAccountTwoStepPage;
+    private UserAccountPage userAccountPage;
     private GetTitleTutorialPages getTitleTutorialPages;
     private HaveAccountPage haveAccountPage;
 
@@ -32,7 +33,7 @@ public class TutorialAccountTest extends BaseTest {
     public void setUp() throws MalformedURLException {
         super.setUp();
         tutorialAccountOneStepPage = new TutorialAccountOneStepPage(getDriver());
-        tutorialAccountTwoStepPage = new TutorialAccountTwoStepPage(getDriver());
+        userAccountPage = new UserAccountPage(getDriver());
         getTitleTutorialPages = new GetTitleTutorialPages(getDriver());
         haveAccountPage = new HaveAccountPage(getDriver());
     }
@@ -96,7 +97,39 @@ public class TutorialAccountTest extends BaseTest {
                 "Неверный текст валидации либо отсуствует");
     }
 
+    @Test
+    @DisplayName("Проверка входа в сервис")
+    public void checkServiceLogin(){
+        haveAccountPage
+                .clickButtonAlreadyAccount()
+                .validEmailField()
+                .enterPassword()
+                .clickSignInButton();
+        Duration timeout = Duration.ofSeconds(10);
+        userAccountPage.clickProfileButton(getDriver(),timeout);
+        userAccountPage.clickSecondaryButtonAvatar();
 
+        String expectedIdAccount = "Android520387";
+        assertEquals(expectedIdAccount,userAccountPage.checkUsernameTextAccount(), "Отсуствует или неверный Id Account");
+    }
+
+
+    @Test
+    @DisplayName("Проверка меню навигации в сервисе")
+    public void checkIsEnableButtonNavigate222() {
+        haveAccountPage
+                .clickButtonAlreadyAccount()
+                .validEmailField()
+                .enterPassword()
+                .clickSignInButton();
+        WebElement leaguesTabButton = userAccountPage.getLeaguesTabButton();
+        Duration timeout = Duration.ofSeconds(10);
+        boolean isLeaguesTabButtonActive = userAccountPage.checkTabButton(getDriver(), leaguesTabButton, "Leagues Tab",timeout);
+        // boolean isLeaguesTabButtonActive = userAccountPage.checkElementIsActive222(getDriver(), leaguesTabButton, timeout);
+        assertTrue(isLeaguesTabButtonActive, "Кнопка 'Leagues Tab' не активна");
+        userAccountPage.clickTabButtonLeaguesTab();
+
+    }
 
 
 
