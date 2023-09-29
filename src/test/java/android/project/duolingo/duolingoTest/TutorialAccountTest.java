@@ -124,10 +124,38 @@ public class TutorialAccountTest extends BaseTest {
                 .clickSignInButton();
         WebElement leaguesTabButton = userAccountPage.getLeaguesTabButton();
         Duration timeout = Duration.ofSeconds(10);
-        boolean isLeaguesTabButtonActive = userAccountPage.checkTabButton(getDriver(), leaguesTabButton, "Leagues Tab",timeout);
-        // boolean isLeaguesTabButtonActive = userAccountPage.checkElementIsActive222(getDriver(), leaguesTabButton, timeout);
+        boolean isLeaguesTabButtonActive = userAccountPage.checkIsEnabledButton(getDriver(), leaguesTabButton, "Leagues Tab",timeout);
         assertTrue(isLeaguesTabButtonActive, "Кнопка 'Leagues Tab' не активна");
         userAccountPage.clickTabButtonLeaguesTab();
+    }
+
+    @Test
+    @DisplayName("Проверка активности забыли пароль")
+    public void checkIsEnableForgotPassword(){
+        haveAccountPage.clickButtonAlreadyAccount();
+        WebElement linkTextForgotPassword = haveAccountPage.getForgotPassword();
+        Duration timeout = Duration.ofSeconds(4);
+        boolean linkTextGetForgotPassword = userAccountPage.checkIsEnabledButton(getDriver(),
+                linkTextForgotPassword,"Текст ссылка 'Забыли пароль'", timeout );
+        assertTrue(linkTextGetForgotPassword,"Текст ссылка 'Забыли пароль' не активна");
+        haveAccountPage.clickLinkTextForgotPassword();
+    }
+    @ParameterizedTest(name = "#{index} - Проверка ввода на невалидность Email {0}")
+    @CsvSource({"%%%|%%%"})
+    @DisplayName("Проверка ввода невалидного Email для сброса пароля")
+    public void checkInvalidEmailSendForgotPassword(String email){
+        checkIsEnableForgotPassword();
+
+        WebElement element = getTitleTutorialPages.getTitleTextForgotPassword();
+        String expectedText = "Введите адрес эл. почты, чтобы получить ссылку для сброса пароля.";
+        assertEquals(expectedText, getTitleTutorialPages.getTextFromElement(element), "Ожидаемый текст не найден на странице");
+
+        haveAccountPage.FieldEmailForgot(email);
+        haveAccountPage.clicksendEmailButtonGetTheLink();
+
+        assertEquals(haveAccountPage.getTextErrorMessage(), "Аккаунта с таким адресом эл. почты на Duolingo не существует.",
+                "Неверный текст валидации либо отсуствует");
+
 
     }
 

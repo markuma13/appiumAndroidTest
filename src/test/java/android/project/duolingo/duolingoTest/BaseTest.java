@@ -36,7 +36,7 @@ public class BaseTest {
     @AfterEach
     public void tearDown() {
         try {
-            Thread.sleep(2000); // Ожидание 2 секунды
+            Thread.sleep(3000); // Ожидание 2 секунды
         } catch (InterruptedException e) {
             e.printStackTrace();
         }

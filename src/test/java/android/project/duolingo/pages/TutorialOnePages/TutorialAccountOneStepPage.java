@@ -24,19 +24,22 @@ public class TutorialAccountOneStepPage {
     private WebElement buttonBack;
 
     public boolean checkButtonBegin() {
-        LOG.info("Проверка активности кнопки Начать");
+        LOG.info("Проверка активности кнопки 'Начать'");
         return buttonBegin.isEnabled();
     }
+
     public void clickButtonBegin() {
-        LOG.info("Клик на кнопу начать");
+        LOG.info("Клик на кнопу 'Начать'");
         buttonBegin.click();
     }
+
     public void clickButtonContinue() {
-        LOG.info("Клик на кнопу продолжить");
+        LOG.info("Клик на кнопу 'Продолжить'");
         buttonContinue.click();
     }
-    public void clickButtonBack(){
-        LOG.info("Клик на кнопку назад");
+
+    public void clickButtonBack() {
+        LOG.info("Клик на кнопку 'Назад'");
         buttonBack.click();
     }
 

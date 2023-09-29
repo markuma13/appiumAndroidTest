@@ -64,7 +64,7 @@ public class UserAccountPage {
         return valueUsername;
     }
 
-    public boolean checkTabButton(AndroidDriver driver, WebElement element, String elementName, Duration timeout) {
+    public boolean checkIsEnabledButton(AndroidDriver driver, WebElement element, String elementName, Duration timeout) {
         LOG.info("Ожидание элемента " + elementName + " и проверка активности кнопки " + elementName);
         try {
             WebDriverWait wait = new WebDriverWait(driver, timeout);

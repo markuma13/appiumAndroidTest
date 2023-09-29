@@ -10,7 +10,10 @@ import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
 public class HaveAccountPage {
-    public HaveAccountPage(AndroidDriver driver){PageFactory.initElements(new AppiumFieldDecorator(driver), this);}
+    public HaveAccountPage(AndroidDriver driver) {
+        PageFactory.initElements(new AppiumFieldDecorator(driver), this);
+    }
+
     private final Logger LOG = LoggerFactory.getLogger(TutorialAccountOneStepPage.class);
 
     @AndroidFindBy(id = "com.duolingo:id/introFlowLoginButton")
@@ -23,6 +26,8 @@ public class HaveAccountPage {
     private WebElement signInButton;
     @AndroidFindBy(id = "com.duolingo:id/forgotPassword")
     private WebElement forgotPassword;
+    @AndroidFindBy(id = "com.duolingo:id/emailInput")
+    private WebElement emailFieldForgotPassword;
     @AndroidFindBy(id = "com.duolingo:id/quit")
     private WebElement closingLoginPage;
     @AndroidFindBy(id = "com.duolingo:id/facebookButton")
@@ -31,47 +36,69 @@ public class HaveAccountPage {
     private WebElement googleButton;
     @AndroidFindBy(id = "com.duolingo:id/errorMessage")
     private WebElement errorMessage;
+    @AndroidFindBy(id = "com.duolingo:id/sendEmailButton")
+    private WebElement sendEmailButton;
+
 
     public boolean checkButtonAlreadyAccount() {
-        LOG.info("Проверка активности кнопки У меня уже есть акаунт");
+        LOG.info("Проверка активности кнопки 'У меня уже есть акаунт'");
         return buttonAlreadyAccount.isEnabled();
     }
-    public HaveAccountPage clickButtonAlreadyAccount(){
-        LOG.info("Клик на кнопку У меня уже есть акаунт");
+
+    public WebElement getForgotPassword() {
+        // какой лог судя вставить?
+        return forgotPassword;
+    }
+
+    public void clickLinkTextForgotPassword() {
+        LOG.info("Клик на кнопку 'Забыли пароль'");
+        forgotPassword.click();
+    }
+
+    public HaveAccountPage clickButtonAlreadyAccount() {
+        LOG.info("Клик на кнопку 'У меня уже есть акаунт'");
         buttonAlreadyAccount.click();
         return this;
     }
-    public HaveAccountPage clickSignInButton(){
-        LOG.info("Клик на кнопку Войти");
+
+    public HaveAccountPage clickSignInButton() {
+        LOG.info("Клик на кнопку 'Войти'");
         signInButton.click();
         return this;
     }
-    public void fillEmailField(String email){
+
+    public void fillEmailField(String email) {
         LOG.info("Ввод email: " + email);
         loginField.sendKeys(email);
     }
-    public HaveAccountPage validEmailField(){
+
+    public void FieldEmailForgot(String email) {
+        LOG.info("Ввод email: " + email);
+        emailFieldForgotPassword.sendKeys(email);
+    }
+
+    public void clicksendEmailButtonGetTheLink() {
+        LOG.info("Клик на кнопку 'Получить ссылку'");
+        sendEmailButton.click();
+    }
+
+    public HaveAccountPage validEmailField() {
         LOG.info("Ввод валидного email");
         loginField.sendKeys("tytufy@mailto.plus");
         return this;
     }
-    public HaveAccountPage enterPassword(){
+
+    public HaveAccountPage enterPassword() {
         LOG.info("Ввод password");
         passwordField.sendKeys("AA890890890");
         return this;
     }
-    public String getTextErrorMessage(){
+
+    public String getTextErrorMessage() {
         String valueErrorMessage = errorMessage.getText();
         LOG.info("Получено валидационное сообщения после отправки формы: \"" + valueErrorMessage + "\"");
         return valueErrorMessage;
     }
-
-
-
-
-
-
-
 
 
 }

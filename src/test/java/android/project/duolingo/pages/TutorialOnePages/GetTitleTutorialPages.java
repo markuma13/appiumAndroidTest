@@ -12,7 +12,6 @@ public class GetTitleTutorialPages {
     public GetTitleTutorialPages(AndroidDriver driver) {
         PageFactory.initElements(new AppiumFieldDecorator(driver), this);
     }
-
     public final Logger LOG = LoggerFactory.getLogger(TutorialAccountOneStepPage.class);
 
     @AndroidFindBy(id = "com.duolingo:id/introFlowText")
@@ -21,14 +20,17 @@ public class GetTitleTutorialPages {
     private WebElement titleTopTextTutorial;
     @AndroidFindBy(id = "com.duolingo:id/title")
     private WebElement titleTextTutorialChoiceLanguage;
+    @AndroidFindBy(id = "com.duolingo:id/body")
+    private WebElement titleTextForgotPassword;
 
     public String getTextFromElement(WebElement element) {
         String value = element.getText();
         LOG.info("Получение текста из элемента: " + element);
         return value;
     }
-
     public WebElement getTitleTextGreetings() {return getTextGreetings;}
     public WebElement getTitleTopTextTutorial() {return titleTopTextTutorial;}
-    public WebElement getTitleTextTutorialChoiceLanguage(){return titleTextTutorialChoiceLanguage;}
+    public WebElement getTitleTextTutorialChoiceLanguage() {return titleTextTutorialChoiceLanguage;}
+    public WebElement getTitleTextForgotPassword() {return titleTextForgotPassword;}
+
 }
