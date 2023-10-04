@@ -22,7 +22,7 @@ public class BaseTest {
         desiredCapabilities.setCapability("appium:nativeWebScreenshot", true);
         desiredCapabilities.setCapability("appium:newCommandTimeout", 3600);
         desiredCapabilities.setCapability("appium:connectHardwareKeyboard", true);
-        desiredCapabilities.setCapability("autoGrantPermissions", true); // отвечает за отключение системных оповещений эмулятора
+        desiredCapabilities.setCapability("autoGrantPermissions", true);
         URL remoteURL = new URL("http://127.0.0.1:4723");
 
         driver = new AndroidDriver(remoteURL, desiredCapabilities);
@@ -36,7 +36,7 @@ public class BaseTest {
     @AfterEach
     public void tearDown() {
         try {
-            Thread.sleep(3000); // Ожидание 2 секунды
+            Thread.sleep(3000);
         } catch (InterruptedException e) {
             e.printStackTrace();
         }

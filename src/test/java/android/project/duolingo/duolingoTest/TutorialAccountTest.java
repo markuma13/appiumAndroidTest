@@ -52,6 +52,13 @@ public class TutorialAccountTest extends BaseTest {
         assertTrue(tutorialAccountOneStepPage.checkButtonBegin(), "Кнопка Начать не активна");
         assertTrue(haveAccountPage.checkButtonAlreadyAccount(), "Кнопка У меня уже есть акаунт не активна");
     }
+    @Test
+    @DisplayName("Проверка активности кнопок Google и Facebook")
+    public void checkActivitiFacebookAndGoogleButton() {
+        haveAccountPage.clickButtonAlreadyAccount();
+        assertTrue(haveAccountPage.checkFacebookButton(), "Кнопка Facebook не активна");
+        assertTrue(haveAccountPage.checkGoogleButton(), "Кнопка У меня уже есть акаунт не активна");
+    }
 
     @Test
     @DisplayName("Проверка наличия текста шагов обучения")
@@ -155,9 +162,8 @@ public class TutorialAccountTest extends BaseTest {
 
         assertEquals(haveAccountPage.getTextErrorMessage(), "Аккаунта с таким адресом эл. почты на Duolingo не существует.",
                 "Неверный текст валидации либо отсуствует");
-
-
     }
+
 
 
 

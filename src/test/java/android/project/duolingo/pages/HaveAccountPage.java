@@ -28,8 +28,6 @@ public class HaveAccountPage {
     private WebElement forgotPassword;
     @AndroidFindBy(id = "com.duolingo:id/emailInput")
     private WebElement emailFieldForgotPassword;
-    @AndroidFindBy(id = "com.duolingo:id/quit")
-    private WebElement closingLoginPage;
     @AndroidFindBy(id = "com.duolingo:id/facebookButton")
     private WebElement facebookButton;
     @AndroidFindBy(id = "com.duolingo:id/googleButton")
@@ -40,13 +38,20 @@ public class HaveAccountPage {
     private WebElement sendEmailButton;
 
 
+    public boolean checkFacebookButton() {
+        LOG.info("Проверка активности кнопки регистрации через Facebook");
+        return facebookButton.isEnabled();
+    }
+    public boolean checkGoogleButton() {
+        LOG.info("Проверка активности кнопки регистрации через Google");
+        return googleButton.isEnabled();
+    }
     public boolean checkButtonAlreadyAccount() {
         LOG.info("Проверка активности кнопки 'У меня уже есть акаунт'");
         return buttonAlreadyAccount.isEnabled();
     }
 
     public WebElement getForgotPassword() {
-        // какой лог судя вставить?
         return forgotPassword;
     }
 
@@ -61,10 +66,9 @@ public class HaveAccountPage {
         return this;
     }
 
-    public HaveAccountPage clickSignInButton() {
+    public void clickSignInButton() {
         LOG.info("Клик на кнопку 'Войти'");
         signInButton.click();
-        return this;
     }
 
     public void fillEmailField(String email) {

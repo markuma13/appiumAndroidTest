@@ -12,7 +12,7 @@ import org.slf4j.LoggerFactory;
 
 
 import java.time.Duration;
-//import io.appium.java_client.Duration;
+
 
 
 public class UserAccountPage {
@@ -21,7 +21,7 @@ public class UserAccountPage {
     }
 
     private final Logger LOG = LoggerFactory.getLogger(UserAccountPage.class);
-    private static AndroidDriver driver;
+
 
     @AndroidFindBy(xpath = "//android.view.ViewGroup[@content-desc=\"Profile Tab\"]/android.widget.ImageView")
     private WebElement profileTabButton;
@@ -29,12 +29,6 @@ public class UserAccountPage {
     private WebElement LearnTabButton;
     @AndroidFindBy(xpath = "//android.view.ViewGroup[@content-desc=\"Leagues Tab\"]/android.widget.ImageView")
     private WebElement LeaguesTabButton;
-    @AndroidFindBy(xpath = "//android.view.ViewGroup[@content-desc=\"Goals Tab\"]/android.widget.ImageView")
-    private WebElement GoalsTabButton;
-    @AndroidFindBy(xpath = "//android.view.ViewGroup[@content-desc=\"News Tab\"]/android.widget.ImageView")
-    private WebElement NewsTabButton;
-    @AndroidFindBy(id = "com.duolingo:id/primaryButton")
-    private WebElement primaryButtonAvatar;
     @AndroidFindBy(id = "com.duolingo:id/secondaryButton")
     private WebElement secondaryButtonAvatar;
     @AndroidFindBy(id = "com.duolingo:id/username")
@@ -81,8 +75,6 @@ public class UserAccountPage {
     public void clickTabButtonLeaguesTab(){
         LeaguesTabButton.click();
     }
-
-
 
 
 }
