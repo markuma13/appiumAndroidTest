@@ -1,20 +1,18 @@
 package android.project.duolingo.pages;
 
-import android.project.duolingo.pages.TutorialOnePages.TutorialAccountOneStepPage;
+import android.project.duolingo.pages.TutorialOnePages.BasePage;
 import io.appium.java_client.android.AndroidDriver;
 import io.appium.java_client.pagefactory.AndroidFindBy;
 import io.appium.java_client.pagefactory.AppiumFieldDecorator;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.PageFactory;
-import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
 
-public class HaveAccountPage {
+
+public class HaveAccountPage extends BasePage {
     public HaveAccountPage(AndroidDriver driver) {
+        super(driver);
         PageFactory.initElements(new AppiumFieldDecorator(driver), this);
     }
-
-    private final Logger LOG = LoggerFactory.getLogger(TutorialAccountOneStepPage.class);
 
     @AndroidFindBy(id = "com.duolingo:id/introFlowLoginButton")
     private WebElement buttonAlreadyAccount;

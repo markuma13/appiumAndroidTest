@@ -1,5 +1,6 @@
 package android.project.duolingo.pages;
 
+import android.project.duolingo.pages.TutorialOnePages.BasePage;
 import io.appium.java_client.android.AndroidDriver;
 import io.appium.java_client.pagefactory.AndroidFindBy;
 import io.appium.java_client.pagefactory.AppiumFieldDecorator;
@@ -7,21 +8,13 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.PageFactory;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
-import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
-
-
 import java.time.Duration;
 
-
-
-public class UserAccountPage {
+public class UserAccountPage extends BasePage {
     public UserAccountPage(AndroidDriver driver) {
+        super(driver);
         PageFactory.initElements(new AppiumFieldDecorator(driver), this);
     }
-
-    private final Logger LOG = LoggerFactory.getLogger(UserAccountPage.class);
-
 
     @AndroidFindBy(xpath = "//android.view.ViewGroup[@content-desc=\"Profile Tab\"]/android.widget.ImageView")
     private WebElement profileTabButton;

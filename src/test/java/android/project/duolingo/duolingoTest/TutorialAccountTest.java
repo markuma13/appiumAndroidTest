@@ -52,6 +52,7 @@ public class TutorialAccountTest extends BaseTest {
         assertTrue(tutorialAccountOneStepPage.checkButtonBegin(), "Кнопка Начать не активна");
         assertTrue(haveAccountPage.checkButtonAlreadyAccount(), "Кнопка У меня уже есть акаунт не активна");
     }
+
     @Test
     @DisplayName("Проверка активности кнопок Google и Facebook")
     public void checkActivitiFacebookAndGoogleButton() {
@@ -62,29 +63,29 @@ public class TutorialAccountTest extends BaseTest {
 
     @Test
     @DisplayName("Проверка наличия текста шагов обучения")
-    public void checkTutorialGetText(){
+    public void checkTutorialGetText() {
         checkGetTextOpenApp();
         tutorialAccountOneStepPage.clickButtonBegin();
 
         WebElement elementOne = getTitleTutorialPages.getTitleTopTextTutorial();
         String expectedText = "Привет! Я Duo!";
-        assertEquals(expectedText, getTitleTutorialPages.getTextFromElement(elementOne));
+        assertEquals(expectedText, getTitleTutorialPages.getTextFromElement(elementOne), "Текст на первом шаге обучения не совпадает");
 
         tutorialAccountOneStepPage.clickButtonContinue();
 
         WebElement elementTwo = getTitleTutorialPages.getTitleTopTextTutorial();
         String expectedTextTwo = "Ну что, поехали!";
-        assertEquals(expectedTextTwo, getTitleTutorialPages.getTextFromElement(elementTwo));
+        assertEquals(expectedTextTwo, getTitleTutorialPages.getTextFromElement(elementTwo), "Текст на втором шаге обучения не совпадает");
 
         tutorialAccountOneStepPage.clickButtonContinue();
         WebElement elementTree = getTitleTutorialPages.getTitleTextTutorialChoiceLanguage();
         String expectedTextTree = "Какой язык вы хотите изучать?";
-        assertEquals(expectedTextTree, getTitleTutorialPages.getTextFromElement(elementTree));
+        assertEquals(expectedTextTree, getTitleTutorialPages.getTextFromElement(elementTree), "Текст на третьем этапе обучения не совпадает");
     }
 
     @Test
     @DisplayName("Проверка возвращения на гланый экран после шага в выборе языка")
-    public void checkBackStepLanguage(){
+    public void checkBackStepLanguage() {
         checkTutorialGetText();
         tutorialAccountOneStepPage.clickButtonBack();
         checkGetTextOpenApp();
@@ -93,7 +94,7 @@ public class TutorialAccountTest extends BaseTest {
     @ParameterizedTest(name = "#{index} - Проверка ввода на невалидность Email {0}")
     @CsvSource({"sasdewef", "%%%/%%%", "trrtr@lwerwe.ru"})
     @DisplayName("Проверка ввода невалидного Email на форме авторизации")
-    public void checkInvalidEnterEmailAccount(String email){
+    public void checkInvalidEnterEmailAccount(String email) {
         checkActivitiBegin();
         haveAccountPage.clickButtonAlreadyAccount();
         haveAccountPage.fillEmailField(email);
@@ -106,18 +107,18 @@ public class TutorialAccountTest extends BaseTest {
 
     @Test
     @DisplayName("Проверка входа в сервис")
-    public void checkServiceLogin(){
+    public void checkServiceLogin() {
         haveAccountPage
                 .clickButtonAlreadyAccount()
                 .validEmailField()
                 .enterPassword()
                 .clickSignInButton();
         Duration timeout = Duration.ofSeconds(10);
-        userAccountPage.clickProfileButton(getDriver(),timeout);
+        userAccountPage.clickProfileButton(getDriver(), timeout);
         userAccountPage.clickSecondaryButtonAvatar();
 
         String expectedIdAccount = "Android520387";
-        assertEquals(expectedIdAccount,userAccountPage.checkUsernameTextAccount(), "Отсуствует или неверный Id Account");
+        assertEquals(expectedIdAccount, userAccountPage.checkUsernameTextAccount(), "Отсуствует или неверный Id Account");
     }
 
 
@@ -131,26 +132,27 @@ public class TutorialAccountTest extends BaseTest {
                 .clickSignInButton();
         WebElement leaguesTabButton = userAccountPage.getLeaguesTabButton();
         Duration timeout = Duration.ofSeconds(10);
-        boolean isLeaguesTabButtonActive = userAccountPage.checkIsEnabledButton(getDriver(), leaguesTabButton, "Leagues Tab",timeout);
+        boolean isLeaguesTabButtonActive = userAccountPage.checkIsEnabledButton(getDriver(), leaguesTabButton, "Leagues Tab", timeout);
         assertTrue(isLeaguesTabButtonActive, "Кнопка 'Leagues Tab' не активна");
         userAccountPage.clickTabButtonLeaguesTab();
     }
 
     @Test
     @DisplayName("Проверка активности забыли пароль")
-    public void checkIsEnableForgotPassword(){
+    public void checkIsEnableForgotPassword() {
         haveAccountPage.clickButtonAlreadyAccount();
         WebElement linkTextForgotPassword = haveAccountPage.getForgotPassword();
         Duration timeout = Duration.ofSeconds(4);
         boolean linkTextGetForgotPassword = userAccountPage.checkIsEnabledButton(getDriver(),
-                linkTextForgotPassword,"Текст ссылка 'Забыли пароль'", timeout );
-        assertTrue(linkTextGetForgotPassword,"Текст ссылка 'Забыли пароль' не активна");
+                linkTextForgotPassword, "Текст ссылка 'Забыли пароль'", timeout);
+        assertTrue(linkTextGetForgotPassword, "Текст ссылка 'Забыли пароль' не активна");
         haveAccountPage.clickLinkTextForgotPassword();
     }
+
     @ParameterizedTest(name = "#{index} - Проверка ввода на невалидность Email {0}")
     @CsvSource({"%%%|%%%"})
     @DisplayName("Проверка ввода невалидного Email для сброса пароля")
-    public void checkInvalidEmailSendForgotPassword(String email){
+    public void checkInvalidEmailSendForgotPassword(String email) {
         checkIsEnableForgotPassword();
 
         WebElement element = getTitleTutorialPages.getTitleTextForgotPassword();
@@ -163,10 +165,6 @@ public class TutorialAccountTest extends BaseTest {
         assertEquals(haveAccountPage.getTextErrorMessage(), "Аккаунта с таким адресом эл. почты на Duolingo не существует.",
                 "Неверный текст валидации либо отсуствует");
     }
-
-
-
-
 
 
 }

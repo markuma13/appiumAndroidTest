@@ -4,13 +4,13 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="09353891-b7f1-49fd-96f9-976b6fc5ab38" name="Changes" comment="addNewTestAndUpdate">
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+    <list default="true" id="09353891-b7f1-49fd-96f9-976b6fc5ab38" name="Changes" comment="addNewTest">
+      <change afterPath="$PROJECT_DIR$/src/test/java/android/project/duolingo/pages/TutorialOnePages/BasePage.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/android/project/duolingo/duolingoTest/BaseTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/android/project/duolingo/duolingoTest/BaseTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/android/project/duolingo/duolingoTest/HaveAccountTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/android/project/duolingo/duolingoTest/HaveAccountTest.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/android/project/duolingo/duolingoTest/TutorialAccountTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/android/project/duolingo/duolingoTest/TutorialAccountTest.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/android/project/duolingo/pages/HaveAccountPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/android/project/duolingo/pages/HaveAccountPage.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/android/project/duolingo/pages/TutorialOnePages/GetTitleTutorialPages.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/android/project/duolingo/pages/TutorialOnePages/GetTitleTutorialPages.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/android/project/duolingo/pages/TutorialOnePages/TutorialAccountOneStepPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/android/project/duolingo/pages/TutorialOnePages/TutorialAccountOneStepPage.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/android/project/duolingo/pages/UserAccountPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/android/project/duolingo/pages/UserAccountPage.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -21,8 +21,8 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="Class" />
         <option value="Interface" />
+        <option value="Class" />
       </list>
     </option>
   </component>
@@ -42,7 +42,6 @@
   &quot;keyToString&quot;: {
     &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
     &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
     &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
     &quot;git-widget-placeholder&quot;: &quot;master&quot;,
     &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
@@ -167,7 +166,9 @@
       <workItem from="1696239310519" duration="97000" />
       <workItem from="1696273746399" duration="929000" />
       <workItem from="1696362629113" duration="1115000" />
-      <workItem from="1696439862026" duration="1675000" />
+      <workItem from="1696439862026" duration="2979000" />
+      <workItem from="1696661591372" duration="3538000" />
+      <workItem from="1696882298456" duration="1416000" />
     </task>
     <task id="LOCAL-00001" summary="addUpdateProject">
       <option name="closed" value="true" />
@@ -209,7 +210,15 @@
       <option name="project" value="LOCAL" />
       <updated>1696002033992</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="addNewTest">
+      <option name="closed" value="true" />
+      <created>1696441769008</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1696441769008</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -218,8 +227,8 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="addUpdateProject" />
     <MESSAGE value="addNewTestcheckInvalidEnterEmailAccount" />
-    <MESSAGE value="addNewTest" />
     <MESSAGE value="addNewTestAndUpdate" />
-    <option name="LAST_COMMIT_MESSAGE" value="addNewTestAndUpdate" />
+    <MESSAGE value="addNewTest" />
+    <option name="LAST_COMMIT_MESSAGE" value="addNewTest" />
   </component>
 </project>

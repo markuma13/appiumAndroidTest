@@ -5,14 +5,12 @@ import io.appium.java_client.pagefactory.AndroidFindBy;
 import io.appium.java_client.pagefactory.AppiumFieldDecorator;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.PageFactory;
-import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
 
-public class GetTitleTutorialPages {
+public class GetTitleTutorialPages extends BasePage {
     public GetTitleTutorialPages(AndroidDriver driver) {
+        super(driver);
         PageFactory.initElements(new AppiumFieldDecorator(driver), this);
     }
-    public final Logger LOG = LoggerFactory.getLogger(TutorialAccountOneStepPage.class);
 
     @AndroidFindBy(id = "com.duolingo:id/introFlowText")
     private WebElement getTextGreetings;
