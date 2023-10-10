@@ -41,9 +41,8 @@ public class TutorialAccountTest extends BaseTest {
     @Test
     @DisplayName("Проверка наличия текста при открытие приложения")
     public void checkGetTextOpenApp() {
-        WebElement element = getTitleTutorialPages.getTitleTextGreetings();
         String expectedText = "Учите языки бесплатно, весело и эффективно!";
-        assertEquals(expectedText, getTitleTutorialPages.getTextFromElement(element), "Ожидаемый текст не найден на странице");
+        assertEquals(expectedText, getTitleTutorialPages.getTitleTextGreetings(), "Ожидаемый текст не найден на странице");
     }
 
     @Test
@@ -67,20 +66,17 @@ public class TutorialAccountTest extends BaseTest {
         checkGetTextOpenApp();
         tutorialAccountOneStepPage.clickButtonBegin();
 
-        WebElement elementOne = getTitleTutorialPages.getTitleTopTextTutorial();
         String expectedText = "Привет! Я Duo!";
-        assertEquals(expectedText, getTitleTutorialPages.getTextFromElement(elementOne), "Текст на первом шаге обучения не совпадает");
+        assertEquals(expectedText, getTitleTutorialPages.getTitleTopTextTutorial(), "Текст на первом шаге обучения не совпадает");
 
         tutorialAccountOneStepPage.clickButtonContinue();
 
-        WebElement elementTwo = getTitleTutorialPages.getTitleTopTextTutorial();
         String expectedTextTwo = "Ну что, поехали!";
-        assertEquals(expectedTextTwo, getTitleTutorialPages.getTextFromElement(elementTwo), "Текст на втором шаге обучения не совпадает");
+        assertEquals(expectedTextTwo, getTitleTutorialPages.getTitleTopTextTutorial(), "Текст на втором шаге обучения не совпадает");
 
         tutorialAccountOneStepPage.clickButtonContinue();
-        WebElement elementTree = getTitleTutorialPages.getTitleTextTutorialChoiceLanguage();
         String expectedTextTree = "Какой язык вы хотите изучать?";
-        assertEquals(expectedTextTree, getTitleTutorialPages.getTextFromElement(elementTree), "Текст на третьем этапе обучения не совпадает");
+        assertEquals(expectedTextTree, getTitleTutorialPages.getTitleTextTutorialChoiceLanguage(), "Текст на третьем этапе обучения не совпадает");
     }
 
     @Test
@@ -155,9 +151,8 @@ public class TutorialAccountTest extends BaseTest {
     public void checkInvalidEmailSendForgotPassword(String email) {
         checkIsEnableForgotPassword();
 
-        WebElement element = getTitleTutorialPages.getTitleTextForgotPassword();
         String expectedText = "Введите адрес эл. почты, чтобы получить ссылку для сброса пароля.";
-        assertEquals(expectedText, getTitleTutorialPages.getTextFromElement(element), "Ожидаемый текст не найден на странице");
+        assertEquals(expectedText, getTitleTutorialPages.getTitleTextForgotPassword(), "Ожидаемый текст не найден на странице");
 
         haveAccountPage.FieldEmailForgot(email);
         haveAccountPage.clicksendEmailButtonGetTheLink();

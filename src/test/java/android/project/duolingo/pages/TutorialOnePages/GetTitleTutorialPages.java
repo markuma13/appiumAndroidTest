@@ -21,14 +21,24 @@ public class GetTitleTutorialPages extends BasePage {
     @AndroidFindBy(id = "com.duolingo:id/body")
     private WebElement titleTextForgotPassword;
 
-    public String getTextFromElement(WebElement element) {
-        String value = element.getText();
-        LOG.info("Получение текста из элемента: " + element);
-        return value;
+    public String getTitleTextGreetings() {
+        LOG.info("Получение текста из элемента");
+        return getTextGreetings.getText();
     }
-    public WebElement getTitleTextGreetings() {return getTextGreetings;}
-    public WebElement getTitleTopTextTutorial() {return titleTopTextTutorial;}
-    public WebElement getTitleTextTutorialChoiceLanguage() {return titleTextTutorialChoiceLanguage;}
-    public WebElement getTitleTextForgotPassword() {return titleTextForgotPassword;}
+
+    public String getTitleTopTextTutorial() {
+        LOG.info("Получение текста из элемента");
+        return titleTopTextTutorial.getText();
+    }
+
+    public String getTitleTextTutorialChoiceLanguage() {
+        LOG.info("Получение текста из элемента");
+        return titleTextTutorialChoiceLanguage.getText();
+    }
+
+    public String getTitleTextForgotPassword() {
+        LOG.info("Получение текста из элемента");
+        return titleTextForgotPassword.getText();
+    }
 
 }
