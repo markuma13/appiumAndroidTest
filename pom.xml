@@ -68,11 +68,6 @@
             <scope>test</scope>
         </dependency>
         <!-- https://mvnrepository.com/artifact/io.appium/java-client -->
-        <dependency>
-            <groupId>io.appium</groupId>
-            <artifactId>java-client</artifactId>
-            <version>8.5.1</version>
-        </dependency>
 
     </dependencies>
     <build>
