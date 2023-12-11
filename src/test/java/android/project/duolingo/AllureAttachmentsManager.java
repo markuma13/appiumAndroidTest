@@ -10,5 +10,4 @@ public class AllureAttachmentsManager {
     public static byte[] screenshot() {
         return ((TakesScreenshot) BaseTest.getDriver()).getScreenshotAs(OutputType.BYTES);
     }
-
 }

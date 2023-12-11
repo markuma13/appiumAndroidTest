@@ -8,11 +8,6 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.PageFactory;
 
 public class TutorialAccountOneStepPage extends BasePage {
-    public TutorialAccountOneStepPage(AndroidDriver driver) {
-        super(driver);
-        PageFactory.initElements(new AppiumFieldDecorator(driver), this);
-    }
-
 
     @AndroidFindBy(id = "com.duolingo:id/introFlowNewUserButton")
     private WebElement buttonBegin;
@@ -21,18 +16,23 @@ public class TutorialAccountOneStepPage extends BasePage {
     @AndroidFindBy(id = "com.duolingo:id/back")
     private WebElement buttonBack;
 
+    public TutorialAccountOneStepPage(AndroidDriver driver) {
+        super(driver);
+        PageFactory.initElements(new AppiumFieldDecorator(driver), this);
+    }
+
     public boolean checkButtonBegin() {
         LOG.info("Проверка активности кнопки 'Начать'");
         return buttonBegin.isEnabled();
     }
 
     public void clickButtonBegin() {
-        LOG.info("Клик на кнопу 'Начать'");
+        LOG.info("Клик на кнопку 'Начать'");
         buttonBegin.click();
     }
 
     public void clickButtonContinue() {
-        LOG.info("Клик на кнопу 'Продолжить'");
+        LOG.info("Клик на кнопку 'Продолжить'");
         buttonContinue.click();
     }
 
@@ -40,6 +40,4 @@ public class TutorialAccountOneStepPage extends BasePage {
         LOG.info("Клик на кнопку 'Назад'");
         buttonBack.click();
     }
-
-
 }

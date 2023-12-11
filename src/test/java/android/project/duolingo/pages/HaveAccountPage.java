@@ -9,11 +9,6 @@ import org.openqa.selenium.support.PageFactory;
 
 
 public class HaveAccountPage extends BasePage {
-    public HaveAccountPage(AndroidDriver driver) {
-        super(driver);
-        PageFactory.initElements(new AppiumFieldDecorator(driver), this);
-    }
-
     @AndroidFindBy(id = "com.duolingo:id/introFlowLoginButton")
     private WebElement buttonAlreadyAccount;
     @AndroidFindBy(id = "com.duolingo:id/loginView")
@@ -35,15 +30,21 @@ public class HaveAccountPage extends BasePage {
     @AndroidFindBy(id = "com.duolingo:id/sendEmailButton")
     private WebElement sendEmailButton;
 
+    public HaveAccountPage(AndroidDriver driver) {
+        super(driver);
+        PageFactory.initElements(new AppiumFieldDecorator(driver), this);
+    }
 
     public boolean checkFacebookButton() {
-        LOG.info("Проверка активности кнопки регистрации через Facebook");
+        LOG.info("Проверка активности кнопки регистрации через 'Facebook'");
         return facebookButton.isEnabled();
     }
+
     public boolean checkGoogleButton() {
-        LOG.info("Проверка активности кнопки регистрации через Google");
+        LOG.info("Проверка активности кнопки регистрации через 'Google'");
         return googleButton.isEnabled();
     }
+
     public boolean checkButtonAlreadyAccount() {
         LOG.info("Проверка активности кнопки 'У меня уже есть акаунт'");
         return buttonAlreadyAccount.isEnabled();
@@ -69,9 +70,10 @@ public class HaveAccountPage extends BasePage {
         signInButton.click();
     }
 
-    public void fillEmailField(String email) {
+    public HaveAccountPage fillEmailField(String email) {
         LOG.info("Ввод email: " + email);
         loginField.sendKeys(email);
+        return this;
     }
 
     public void FieldEmailForgot(String email) {
@@ -79,7 +81,7 @@ public class HaveAccountPage extends BasePage {
         emailFieldForgotPassword.sendKeys(email);
     }
 
-    public void clicksendEmailButtonGetTheLink() {
+    public void clickSendEmailButtonGetTheLink() {
         LOG.info("Клик на кнопку 'Получить ссылку'");
         sendEmailButton.click();
     }
@@ -101,6 +103,4 @@ public class HaveAccountPage extends BasePage {
         LOG.info("Получено валидационное сообщения после отправки формы: \"" + valueErrorMessage + "\"");
         return valueErrorMessage;
     }
-
-
 }

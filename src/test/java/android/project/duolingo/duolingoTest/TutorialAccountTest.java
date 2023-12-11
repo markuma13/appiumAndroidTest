@@ -46,18 +46,19 @@ public class TutorialAccountTest extends BaseTest {
     }
 
     @Test
-    @DisplayName("Проверка активности кнопок Начать и У меня уже есть акаунт")
-    public void checkActivitiBegin() {
-        assertTrue(tutorialAccountOneStepPage.checkButtonBegin(), "Кнопка Начать не активна");
-        assertTrue(haveAccountPage.checkButtonAlreadyAccount(), "Кнопка У меня уже есть акаунт не активна");
+    @DisplayName("Проверка активности кнопок 'Начать' и 'У меня уже есть акаунт'")
+    public void checkActiveBegin() {
+        assertTrue(tutorialAccountOneStepPage.checkButtonBegin(), "Кнопка 'Начать' не активна");
+        assertTrue(haveAccountPage.checkButtonAlreadyAccount(), "Кнопка 'У меня уже есть акаунт' не активна");
     }
 
     @Test
     @DisplayName("Проверка активности кнопок Google и Facebook")
-    public void checkActivitiFacebookAndGoogleButton() {
+    public void checkActiveFacebookAndGoogleButton() {
         haveAccountPage.clickButtonAlreadyAccount();
-        assertTrue(haveAccountPage.checkFacebookButton(), "Кнопка Facebook не активна");
-        assertTrue(haveAccountPage.checkGoogleButton(), "Кнопка У меня уже есть акаунт не активна");
+
+        assertTrue(haveAccountPage.checkFacebookButton(), "Кнопка 'Facebook' не активна");
+        assertTrue(haveAccountPage.checkGoogleButton(), "Кнопка 'Google' не активна");
     }
 
     @Test
@@ -75,12 +76,13 @@ public class TutorialAccountTest extends BaseTest {
         assertEquals(expectedTextTwo, getTitleTutorialPages.getTitleTopTextTutorial(), "Текст на втором шаге обучения не совпадает");
 
         tutorialAccountOneStepPage.clickButtonContinue();
+
         String expectedTextTree = "Какой язык вы хотите изучать?";
         assertEquals(expectedTextTree, getTitleTutorialPages.getTitleTextTutorialChoiceLanguage(), "Текст на третьем этапе обучения не совпадает");
     }
 
     @Test
-    @DisplayName("Проверка возвращения на гланый экран после шага в выборе языка")
+    @DisplayName("Проверка возвращения на главный экран после шага в выборе языка")
     public void checkBackStepLanguage() {
         checkTutorialGetText();
         tutorialAccountOneStepPage.clickButtonBack();
@@ -88,14 +90,15 @@ public class TutorialAccountTest extends BaseTest {
     }
 
     @ParameterizedTest(name = "#{index} - Проверка ввода на невалидность Email {0}")
-    @CsvSource({"sasdewef", "%%%/%%%", "trrtr@lwerwe.ru"})
+    @CsvSource({"sideways", "%%%/%%%", "trrtr@lwerwe.ru"})
     @DisplayName("Проверка ввода невалидного Email на форме авторизации")
     public void checkInvalidEnterEmailAccount(String email) {
-        checkActivitiBegin();
-        haveAccountPage.clickButtonAlreadyAccount();
-        haveAccountPage.fillEmailField(email);
-        haveAccountPage.enterPassword();
-        haveAccountPage.clickSignInButton();
+        checkActiveBegin();
+        haveAccountPage
+                .clickButtonAlreadyAccount()
+                .fillEmailField(email)
+                .enterPassword()
+                .clickSignInButton();
 
         assertEquals(haveAccountPage.getTextErrorMessage(), "Неверные имя пользователя и пароль",
                 "Неверный текст валидации либо отсуствует");
@@ -104,31 +107,34 @@ public class TutorialAccountTest extends BaseTest {
     @Test
     @DisplayName("Проверка входа в сервис")
     public void checkServiceLogin() {
+        String expectedIdAccount = "Android520387";
         haveAccountPage
                 .clickButtonAlreadyAccount()
                 .validEmailField()
                 .enterPassword()
                 .clickSignInButton();
+
         Duration timeout = Duration.ofSeconds(10);
+
         userAccountPage.clickProfileButton(getDriver(), timeout);
         userAccountPage.clickSecondaryButtonAvatar();
 
-        String expectedIdAccount = "Android520387";
         assertEquals(expectedIdAccount, userAccountPage.checkUsernameTextAccount(), "Отсуствует или неверный Id Account");
     }
 
-
     @Test
     @DisplayName("Проверка меню навигации в сервисе")
-    public void checkIsEnableButtonNavigate222() {
+    public void checkIsEnableButtonNavigate() {
+        WebElement leaguesTabButton = userAccountPage.getLeaguesTabButton();
         haveAccountPage
                 .clickButtonAlreadyAccount()
                 .validEmailField()
                 .enterPassword()
                 .clickSignInButton();
-        WebElement leaguesTabButton = userAccountPage.getLeaguesTabButton();
+
         Duration timeout = Duration.ofSeconds(10);
         boolean isLeaguesTabButtonActive = userAccountPage.checkIsEnabledButton(getDriver(), leaguesTabButton, "Leagues Tab", timeout);
+
         assertTrue(isLeaguesTabButtonActive, "Кнопка 'Leagues Tab' не активна");
         userAccountPage.clickTabButtonLeaguesTab();
     }
@@ -136,11 +142,13 @@ public class TutorialAccountTest extends BaseTest {
     @Test
     @DisplayName("Проверка активности забыли пароль")
     public void checkIsEnableForgotPassword() {
-        haveAccountPage.clickButtonAlreadyAccount();
         WebElement linkTextForgotPassword = haveAccountPage.getForgotPassword();
+        haveAccountPage.clickButtonAlreadyAccount();
+
         Duration timeout = Duration.ofSeconds(4);
         boolean linkTextGetForgotPassword = userAccountPage.checkIsEnabledButton(getDriver(),
                 linkTextForgotPassword, "Текст ссылка 'Забыли пароль'", timeout);
+
         assertTrue(linkTextGetForgotPassword, "Текст ссылка 'Забыли пароль' не активна");
         haveAccountPage.clickLinkTextForgotPassword();
     }
@@ -149,17 +157,16 @@ public class TutorialAccountTest extends BaseTest {
     @CsvSource({"%%%|%%%"})
     @DisplayName("Проверка ввода невалидного Email для сброса пароля")
     public void checkInvalidEmailSendForgotPassword(String email) {
+        String expectedText = "Введите адрес эл. почты, чтобы получить ссылку для сброса пароля.";
+
         checkIsEnableForgotPassword();
 
-        String expectedText = "Введите адрес эл. почты, чтобы получить ссылку для сброса пароля.";
         assertEquals(expectedText, getTitleTutorialPages.getTitleTextForgotPassword(), "Ожидаемый текст не найден на странице");
 
         haveAccountPage.FieldEmailForgot(email);
-        haveAccountPage.clicksendEmailButtonGetTheLink();
+        haveAccountPage.clickSendEmailButtonGetTheLink();
 
         assertEquals(haveAccountPage.getTextErrorMessage(), "Аккаунта с таким адресом эл. почты на Duolingo не существует.",
                 "Неверный текст валидации либо отсуствует");
     }
-
-
 }

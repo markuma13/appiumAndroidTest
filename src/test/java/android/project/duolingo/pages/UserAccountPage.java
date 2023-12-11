@@ -8,14 +8,10 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.PageFactory;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
+
 import java.time.Duration;
 
 public class UserAccountPage extends BasePage {
-    public UserAccountPage(AndroidDriver driver) {
-        super(driver);
-        PageFactory.initElements(new AppiumFieldDecorator(driver), this);
-    }
-
     @AndroidFindBy(xpath = "//android.view.ViewGroup[@content-desc=\"Profile Tab\"]/android.widget.ImageView")
     private WebElement profileTabButton;
     @AndroidFindBy(xpath = "//android.view.ViewGroup[@content-desc=\"Learn Tab\"]/android.widget.ImageView")
@@ -27,6 +23,10 @@ public class UserAccountPage extends BasePage {
     @AndroidFindBy(id = "com.duolingo:id/username")
     private WebElement usernameTextAccount;
 
+    public UserAccountPage(AndroidDriver driver) {
+        super(driver);
+        PageFactory.initElements(new AppiumFieldDecorator(driver), this);
+    }
 
     public void clickProfileButton(AndroidDriver driver, Duration timeout) {
         try {
@@ -40,7 +40,7 @@ public class UserAccountPage extends BasePage {
     }
 
     public void clickSecondaryButtonAvatar() {
-        LOG.info("Клик на кнопку Напомнить позже при создании аватара");
+        LOG.info("Клик на кнопку 'Напомнить позже' при создании аватара");
         secondaryButtonAvatar.click();
     }
 
@@ -65,9 +65,8 @@ public class UserAccountPage extends BasePage {
     public WebElement getLeaguesTabButton() {
         return LearnTabButton;
     }
-    public void clickTabButtonLeaguesTab(){
+
+    public void clickTabButtonLeaguesTab() {
         LeaguesTabButton.click();
     }
-
-
 }

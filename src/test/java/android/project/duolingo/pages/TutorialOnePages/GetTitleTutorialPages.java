@@ -7,11 +7,6 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.PageFactory;
 
 public class GetTitleTutorialPages extends BasePage {
-    public GetTitleTutorialPages(AndroidDriver driver) {
-        super(driver);
-        PageFactory.initElements(new AppiumFieldDecorator(driver), this);
-    }
-
     @AndroidFindBy(id = "com.duolingo:id/introFlowText")
     private WebElement getTextGreetings;
     @AndroidFindBy(id = "com.duolingo:id/titleTop")
@@ -20,6 +15,11 @@ public class GetTitleTutorialPages extends BasePage {
     private WebElement titleTextTutorialChoiceLanguage;
     @AndroidFindBy(id = "com.duolingo:id/body")
     private WebElement titleTextForgotPassword;
+
+    public GetTitleTutorialPages(AndroidDriver driver) {
+        super(driver);
+        PageFactory.initElements(new AppiumFieldDecorator(driver), this);
+    }
 
     public String getTitleTextGreetings() {
         LOG.info("Получение текста из элемента");
@@ -40,5 +40,4 @@ public class GetTitleTutorialPages extends BasePage {
         LOG.info("Получение текста из элемента");
         return titleTextForgotPassword.getText();
     }
-
 }

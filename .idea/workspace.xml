@@ -5,9 +5,18 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="09353891-b7f1-49fd-96f9-976b6fc5ab38" name="Changes" comment="updateTest">
+      <change afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/android/project/duolingo/readmes/TutorialAccountTest.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/encodings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/android/project/duolingo/AllureAttachmentsManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/android/project/duolingo/AllureAttachmentsManager.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/android/project/duolingo/duolingoTest/TutorialAccountTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/android/project/duolingo/duolingoTest/TutorialAccountTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/android/project/duolingo/pages/HaveAccountPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/android/project/duolingo/pages/HaveAccountPage.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/android/project/duolingo/pages/TutorialOnePages/GetTitleTutorialPages.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/android/project/duolingo/pages/TutorialOnePages/GetTitleTutorialPages.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/android/project/duolingo/pages/TutorialOnePages/TutorialAccountOneStepPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/android/project/duolingo/pages/TutorialOnePages/TutorialAccountOneStepPage.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/android/project/duolingo/pages/UserAccountPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/android/project/duolingo/pages/UserAccountPage.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -25,6 +34,9 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
+  <component name="MarkdownSettingsMigration">
+    <option name="stateVersion" value="1" />
+  </component>
   <component name="ProjectColorInfo">{
   &quot;associatedIndex&quot;: 5
 }</component>
@@ -34,29 +46,31 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;master&quot;,
-    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
-    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
-    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
-    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
-    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;reference.settings.project.maven.repository.indices&quot;,
-    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
+    "WebServerToolWindowFactoryState": "false",
+    "git-widget-placeholder": "master",
+    "kotlin-language-version-configured": "true",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "settings.editor.selected.configurable": "reference.settings.project.maven.repository.indices",
+    "vue.rearranger.settings.migration": "true"
   }
-}</component>
+}]]></component>
   <component name="RecentsManager">
     <key name="CreateClassDialog.RecentsKey">
       <recent name="android.project.duolingo.pages" />
     </key>
   </component>
   <component name="RunManager" selected="JUnit.TutorialAccountTest.checkServiceLogin (1)">
-    <configuration name="TutorialAccountTest.checkActivitiFacebookAndGoogleButton" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="appiumAndroidTets" />
+    <configuration name="TutorialAccountTest.checkActiveFacebookAndGoogleButton" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="appiumAndroidTest" />
       <extension name="coverage">
         <pattern>
           <option name="PATTERN" value="android.project.duolingo.duolingoTest.*" />
@@ -65,14 +79,14 @@
       </extension>
       <option name="PACKAGE_NAME" value="android.project.duolingo.duolingoTest" />
       <option name="MAIN_CLASS_NAME" value="android.project.duolingo.duolingoTest.TutorialAccountTest" />
-      <option name="METHOD_NAME" value="checkActivitiFacebookAndGoogleButton" />
+      <option name="METHOD_NAME" value="checkActiveFacebookAndGoogleButton" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
     <configuration name="TutorialAccountTest.checkInvalidEmailSendForgotPassword" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="appiumAndroidTets" />
+      <module name="appiumAndroidTest" />
       <extension name="coverage">
         <pattern>
           <option name="PATTERN" value="android.project.duolingo.duolingoTest.*" />
@@ -87,8 +101,8 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="TutorialAccountTest.checkIsEnableButtonNavigate222" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="appiumAndroidTets" />
+    <configuration name="TutorialAccountTest.checkIsEnableButtonNavigate" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="appiumAndroidTest" />
       <extension name="coverage">
         <pattern>
           <option name="PATTERN" value="android.project.duolingo.duolingoTest.*" />
@@ -97,14 +111,14 @@
       </extension>
       <option name="PACKAGE_NAME" value="android.project.duolingo.duolingoTest" />
       <option name="MAIN_CLASS_NAME" value="android.project.duolingo.duolingoTest.TutorialAccountTest" />
-      <option name="METHOD_NAME" value="checkIsEnableButtonNavigate222" />
+      <option name="METHOD_NAME" value="checkIsEnableButtonNavigate" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
     <configuration name="TutorialAccountTest.checkIsEnableForgotPassword" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="appiumAndroidTets" />
+      <module name="appiumAndroidTest" />
       <extension name="coverage">
         <pattern>
           <option name="PATTERN" value="android.project.duolingo.duolingoTest.*" />
@@ -120,7 +134,7 @@
       </method>
     </configuration>
     <configuration name="TutorialAccountTest.checkServiceLogin (1)" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="appiumAndroidTets" />
+      <module name="appiumAndroidTest" />
       <extension name="coverage">
         <pattern>
           <option name="PATTERN" value="android.project.duolingo.duolingoTest.*" />
@@ -139,7 +153,7 @@
       <list>
         <item itemvalue="JUnit.TutorialAccountTest.checkServiceLogin (1)" />
         <item itemvalue="JUnit.TutorialAccountTest.checkIsEnableForgotPassword" />
-        <item itemvalue="JUnit.TutorialAccountTest.checkActivitiFacebookAndGoogleButton" />
+        <item itemvalue="JUnit.TutorialAccountTest.checkActiveFacebookAndGoogleButton" />
         <item itemvalue="JUnit.TutorialAccountTest.checkInvalidEmailSendForgotPassword" />
         <item itemvalue="JUnit.TutorialAccountTest.checkIsEnableButtonNavigate222" />
       </list>
@@ -166,6 +180,12 @@
       <workItem from="1696661591372" duration="3538000" />
       <workItem from="1696882298456" duration="1469000" />
       <workItem from="1696926480686" duration="611000" />
+      <workItem from="1700144000195" duration="80000" />
+      <workItem from="1700489352436" duration="716000" />
+      <workItem from="1700552248332" duration="7000" />
+      <workItem from="1701196506713" duration="48000" />
+      <workItem from="1702034590100" duration="646000" />
+      <workItem from="1702295117784" duration="5790000" />
     </task>
     <task id="LOCAL-00001" summary="addUpdateProject">
       <option name="closed" value="true" />
